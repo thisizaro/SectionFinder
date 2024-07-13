@@ -1,0 +1,9 @@
+.CardContainer {
+  margin: 10px;
+  height: 90vh;
+}
+
+.professorCard {
+  width: calc(90vw * (0.25));
+  min-height: 80vh;
+}

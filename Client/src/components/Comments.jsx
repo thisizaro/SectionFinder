@@ -7,14 +7,15 @@ const Comments = ({ postId }) => {
   const [newComment, setNewComment] = useState("");
   const [newRating, setNewRating] = useState(0);
   const [averageRating, setAverageRating] = useState(null); // Initialize as null
+  const backendUrl = "http://localhost:3001"; // Change to your backend URL
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/api/posts/${postId}/comments`)
+      .get(`${backendUrl}/api/posts/${postId}/comments`)
       .then((response) => setComments(response.data))
       .catch((error) => console.error(error));
     axios
-      .get(`http://localhost:3001/api/posts/${postId}/rating`)
+      .get(`${backendUrl}/api/posts/${postId}/rating`)
       .then((response) => {
         if (response.data.averageRating === null) {
           setAverageRating(0); // Handle null case
@@ -28,14 +29,14 @@ const Comments = ({ postId }) => {
   const handleCommentSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`http://localhost:3001/api/posts/${postId}/comments`, {
+      .post(`${backendUrl}/api/posts/${postId}/comments`, {
         comment: newComment,
         rating: newRating,
       })
       .then((response) => {
         setComments(response.data);
         axios
-          .get(`http://localhost:3001/api/posts/${postId}/rating`)
+          .get(`${backendUrl}/api/posts/${postId}/rating`)
           .then((response) => {
             if (response.data.averageRating === null) {
               setAverageRating(5); // Handle null case

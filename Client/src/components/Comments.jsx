@@ -7,7 +7,7 @@ const Comments = ({ postId }) => {
   const [newComment, setNewComment] = useState("");
   const [newRating, setNewRating] = useState(0);
   const [averageRating, setAverageRating] = useState(null); // Initialize as null
-  const backendUrl = "http://localhost:3001"; // Change to your backend URL
+  const backendUrl = "http://127.0.0.1:3001"; // Change to your backend URL
 
   useEffect(() => {
     axios

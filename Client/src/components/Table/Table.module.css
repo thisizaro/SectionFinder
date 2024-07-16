@@ -1,0 +1,28 @@
+/* src/components/Table/Table.module.css */
+.tableContainer {
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  th,
+  td {
+    padding: 8px;
+  }
+}

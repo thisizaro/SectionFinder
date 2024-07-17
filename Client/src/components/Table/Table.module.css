@@ -1,5 +1,10 @@
-/* src/components/Table/Table.module.css */
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
 .tableContainer {
+  flex: 2;
   padding: 20px;
   overflow-x: auto;
 }
@@ -18,6 +23,18 @@ td {
 th {
   background-color: #f4f4f4;
   text-align: left;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    border-left: none;
+    border-top: 1px solid #ddd;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 600px) {

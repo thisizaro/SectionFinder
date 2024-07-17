@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "./fetchData";
 import styles from "./MatchesFound.module.css";
-import qrCode from "./Code.png";
+// import qrCode from "./Code.png";
+import SidebarContent from "../SidebarContent/SidebarContent";
 
 const sheetId = "1lbMjNIFn2dj93tsrXb8WSj16gRziSIjqDQo_wbk6BFU";
 
@@ -51,10 +52,7 @@ const MatchesFound = () => {
           </tbody>
         </table>
       </div>
-      <div className={styles.sidebar}>
-        <img src={qrCode} alt="QR Code" className={styles.qrCode} />
-        <p>Please consider making a donation!</p>
-      </div>
+      <SidebarContent />
     </div>
   );
 };

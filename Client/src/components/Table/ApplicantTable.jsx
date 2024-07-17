@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "./fetchData.js";
 import styles from "./Table.module.css";
+import SidebarContent from "../SidebarContent/SidebarContent";
 
 const POLLING_INTERVAL = 5000;
 
@@ -25,9 +26,9 @@ function ApplicantTable() {
   }, []);
 
   return (
-    <>
-      <h1>Applicants</h1>
+    <div className={styles.container}>
       <div className={styles.tableContainer}>
+        <h1>Applicants</h1>
         <table className={styles.table}>
           <thead>
             <tr>
@@ -55,7 +56,8 @@ function ApplicantTable() {
           </tbody>
         </table>
       </div>
-    </>
+      {/* <SidebarContent /> */}
+    </div>
   );
 }
 

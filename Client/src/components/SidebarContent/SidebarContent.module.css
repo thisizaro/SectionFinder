@@ -1,9 +1,4 @@
-/* src/components/MatchesFound/MatchesFound.module.css */
-.container {
-  display: flex;
-  flex-direction: row;
-}
-
+/* src/components/SidebarContent/SidebarContent.module.css */
 .sidebar {
   flex: 1;
   display: flex;
@@ -20,33 +15,7 @@
   margin-bottom: 10px;
 }
 
-.tableContainer {
-  flex: 2;
-  padding: 20px;
-  overflow-x: auto;
-}
-
-.table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  padding: 10px;
-  border: 1px solid #ddd;
-}
-
-th {
-  background-color: #f4f4f4;
-  text-align: left;
-}
-
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
   .sidebar {
     border-left: none;
     border-top: 1px solid #ddd;
@@ -55,11 +24,6 @@ th {
 }
 
 @media (max-width: 600px) {
-  th,
-  td {
-    padding: 8px;
-  }
-
   .qrCode {
     width: 150px;
     height: 150px;

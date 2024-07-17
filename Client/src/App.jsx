@@ -8,6 +8,7 @@ import data from "./components/data.json";
 import ApplicantTable from "./components/Table/ApplicantTable";
 import NavBar from "./components/NavBar/NavBar";
 import MatchesFound from "./components/MatchesFound/MatchesFound.jsx";
+import ApplyHere from "./components/ApplyHere/ApplyHere.jsx";
 
 function App() {
   const { headers, rows } = data;
@@ -21,6 +22,7 @@ function App() {
           <Route path="/cse-sections" element={<SectionsList />} />
           <Route path="/applicants" element={<ApplicantTable />} />
           <Route path="/matches-found" element={<MatchesFound />} />
+          <Route path="/apply" element={<ApplyHere />} />
           {/* Placeholder for Matches Found */}
           {rows &&
             rows.map((row, index) => (

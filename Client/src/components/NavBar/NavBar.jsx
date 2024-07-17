@@ -34,6 +34,11 @@ function NavBar() {
                   Matches Found
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/apply">
+                  Apply Here
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

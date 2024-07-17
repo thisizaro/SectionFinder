@@ -7,7 +7,7 @@ import SectionsList from "./components/SectionsList";
 import data from "./components/data.json";
 import ApplicantTable from "./components/Table/ApplicantTable";
 import NavBar from "./components/NavBar/NavBar";
-import MatchesFound from "./components/MatchesFound/MatchesFound";
+import MatchesFound from "./components/MatchesFound/MatchesFound.jsx";
 
 function App() {
   const { headers, rows } = data;

@@ -6,6 +6,7 @@ const ApplyHere = () => {
     <div className={styles.container}>
       <h1>Apply Here</h1>
       <p>Please fill out the form by clicking the button below:</p>
+      <p>You need KIIT email ID to fill the form.</p>
       <a
         href="https://forms.gle/BEe9XyJXc5hDRRX98"
         target="_blank"
